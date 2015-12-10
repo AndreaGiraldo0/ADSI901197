@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Visualizacion(overflow)</title>
+	<style>
+main {
+	margin: 50px auto;
+	width: 660px;
+}
+article{
+	border: 4px solid #ccc;
+	display: inline-block;
+	height: 200px;
+	padding: 10px;
+	vertical-align: top;
+	width: 180px;
+}
+h1 {background-color: #ddd;}
+.o-visible{overflow: visible;}
+.o-hidden {overflow: hidden;}
+.o-scroll {overflow: scroll;}
+
+	</style>
+</head>
+<body>
+	<h1>Visualizacion(overflow)</h1>
+	<hr>
+	<main>
+		
+		<article class='o-visible'>
+			<h1>overflow:visible</h1>
+			<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur quibusdam, perspiciatis voluptatem in nulla nihil ratione nostrum nobis pariatur doloremque et necessitatibus reprehenderit omnis voluptates deleniti accusantium! Velit commodi, et.</p>
+		</article>
+<!-- -->
+		<article class='o-hidden'>
+			<h1>overflow:hidden</h1>
+			<p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur quibusdam, perspiciatis voluptatem in nulla nihil ratione nostrum nobis pariatur doloremque et necessitatibus reprehenderit omnis voluptates deleniti accusantium! Velit commodi, et.</p>
+		</article>
+<!-- -->
+		<article  class='o-scroll'>
+			<h1>overflow:scroll</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur quibusdam, perspiciatis voluptatem in nulla nihil ratione nostrum nobis pariatur doloremque et necessitatibus reprehenderit omnis voluptates deleniti accusantium! Velit commodi, et.</p>
+		</article>
+	</main>
+</body>
+</html>
