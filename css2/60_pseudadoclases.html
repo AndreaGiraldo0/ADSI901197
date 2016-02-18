@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Peseudo Clases</title>
+	<style>
+	body{
+		font:18px Arial ;
+	}
+	nav li{
+display:inline-block;
+list-style:none;
+text-align:center;
+	}
+a:link,
+a:visited{
+	background-color:#853636;
+	color:#fff;
+	display:block;
+	padding:20px;
+	text-decoration:none;
+	width:100px;
+}
+a:hover{
+	background-color: #2d6940;
+}
+a:active {
+	background-color:#2d4869;
+}
+input {
+	background-color:#f4d7a7;
+	border:2px solid #987b4d;
+	font:20px Arial;
+	padding:20px;
+	width:400px;
+}
+input:focus{
+	background-color:#d9a652;
+	color:#820909;
+	text-transform:uppercase;
+}
+div.cuadrados::before{
+	background-color:#7566E8;
+content: '';
+position:absolute;
+top: 0px; left: 0px;
+height:100px;
+width:100px;
+}
+div.cuadrados {
+	background-color:#3F218C;
+	position: relative;
+	height: 100px;
+	width:200px;
+}
+div.cuadrados::after{
+background-color:#12028D;
+content: '';
+position:absolute;
+top: 0px; left: 0px;
+height:100px;
+width:100px;
+}
+	</style>
+</head>
+<body>
+<h1>Peseudo Clases</h1>
+<hr>
+<h2>link/visited/active/hover</h2>
+<nav>
+	<ul>
+		<li><a href="#">inicio</a></li>
+		<li><a href="#">nosotros</a></li>
+		<li><a href="#">servicios</a></li>
+		<li><a href="#">contacto</a></li>
+	</ul>
+</nav>
+<br><br>
+<h2>focus</h2>
+<input type="text">
+<br><br>
+<h2>before/after</h2>
+<div class="cuadrados"></div>
+</body>
+</html>

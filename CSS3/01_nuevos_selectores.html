@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nuevos Selectores</title>
+	<style>
+body {font:18px Tahoma;}
+fieldset {
+	border: 4px solid #7f979d;
+	padding: 20px;
+	margin: 20px auto;
+	width: 600px;
+}
+legend {
+	background-color: #7f979d;
+	color: #fff;
+}
+legend h1 {
+	padding: 4px 80px;
+}
+/*p~ul --------------------------------------*/
+p~ul {
+	background-color: #62a812;
+}
+
+/*a[href^=https] --------------------------------------*/
+a[href^=https] {
+	background-color: #13BEAC;
+	color: #fff;
+	padding: 10px;
+}
+
+/*a[href$=pdf] --------------------------------------*/
+a[href$=pdf] {
+	background-color: #D635AE;
+	color: #fff;
+	padding: 10px;
+}
+
+/*a[href*=google] --------------------------------------*/
+a[href*=google] {
+	background-color: #99E62A;
+	color: #fff;
+	padding: 10px;
+}
+
+/*p:first-of-type; --------------------------------------*/
+.fot p:first-of-type {
+	background-color: #2DEEA3;
+	color: #fff;
+	padding: 10px;
+}
+
+
+/*p:last-of-type; --------------------------------------*/
+.lot p:last-of-type {
+	background-color: #2DEEA3;
+	color: #fff;
+	padding: 10px;
+}
+
+/*p:only-child; --------------------------------------*/
+.oc p:only-child {
+	background-color: #2DEEA3;
+	color: #fff;
+	padding: 10px;
+}
+
+/*p:nth-child(3); --------------------------------------*/
+.nc p:nth-child(3) {
+	background-color: #137FED;
+	color: #fff;
+	padding: 10px;
+}
+/*p:nth-last-child(3); --------------------------------------*/
+.nc p:nth-last-child(3) {
+	background-color: #EE166C;
+	color: #fff;
+	padding: 10px;
+}
+
+	</style>
+</head>
+<body>
+	<h1>Nuevos Selectores</h1>
+	<!-- ========================-->
+	<fieldset>
+		<legend><h1>p~ul</h1></legend>
+		<em>Selecciona todo los elemento ul procedidos por</em>
+		<p>
+			<ul>
+				<li>Elemento</li>
+				<li>Elemento</li>
+				<ul>
+				<li>Elemento</li>
+				<li>Elemento</li>
+                </ul>
+			</ul>
+		</p>
+	</fieldset>
+	<!-- ========================-->
+
+	<!-- ========================-->
+	<fieldset>
+		<legend><h1>a[href^=https]</h1></legend>
+		<em>Selecciona todo los elemento 'a' cuyo 
+		valor del atributo 'href' comienza con https</em>
+		<br>
+		<br>
+		<a href="http://www.google.com">Google</a>
+		<a href="http://www.yahoo.com">Yahoo</a>
+		<a href="https://www.youtube.com">Youtube</a>
+		<a href="http://www.hotmail.com">hotmail</a>
+		<a href="https://www.twitter.com">twitter</a>
+	</fieldset>
+	<!-- ========================-->
+
+	<!-- ========================-->
+	<fieldset>
+		<legend><h1>a[href$=pdf]</h1></legend>
+		<em>Selecciona todo los elemento 'a' cuyo 
+		valor del atributo 'href' comienza con "pdf"</em>
+		<br>
+		<br>
+		<a href="files/documento.pdf">Documento PDF</a>
+		<a href="hfiles/archivo.docx">Archivo Word</a>
+		<a href="files/documento.txt">Documento Texto</a>
+		<a href="files/hoja.xls">hoja de Calculo</a>
+	</fieldset>
+	<!-- ========================-->
+
+
+	<!-- ========================-->
+	<fieldset>
+		<legend><h1>a[href*=google]</h1></legend>
+		<em>Selecciona todo los elemento 'a' cuyo 
+		valor del atributo 'href' contiene la cadena "google"</em>
+		<br>
+		<br>
+		<a href="http://www.yahoo.com">Yahoo</a>
+		<a href="http://www.google.com">Google</a>
+		<a href="http://www.youtube.com">Youtube</a>
+	</fieldset>
+	<!-- ========================-->
+
+	<!-- ========================-->
+	<fieldset>
+		<legend><h1>p:first-of-type</h1></legend>
+		<em>Selecciona el primer elemento 'p' </em>
+		<br>
+		<br>
+		<section class="fot">
+		<p>Lorem ipsum dolor sit amet, consectetur.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur.</p>
+		</section>
+	</fieldset>
+	<!-- ========================-->
+
+	<fieldset>
+		<legend><h1>p:last-of-type</h1></legend>
+		<em>Selecciona el ultimo elemento 'p' </em>
+		<br>
+		<br>
+		<section class="lot">
+		<p>Lorem ipsum dolor sit amet, consectetur.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur.</p>
+		</section>
+	</fieldset>
+	<!-- ========================-->
+
+	<fieldset>
+		<legend><h1>p:only-child</h1></legend>
+		<em>Selecciona el unico elemento hijo 'p'
+		no puede tener hermanos </em>
+		<br>
+		<br>
+		<section class="oc">
+		<p>Lorem ipsum dolor sit amet, consectetur.</p>
+		</section>
+	</fieldset>
+	<!-- ========================-->
+
+	<fieldset>
+		<legend><h1>p:nth-child(3)</h1></legend>
+		<em>Selecciona el unico elemento hijo 'p'
+		no puede tener hermanos </em>
+		<br>
+		<br>
+		<section class="nc">
+		<p>Lorem ipsum dolor sit amet, consectetur.</p>
+		</section>
+	</fieldset>
+	<!-- ========================-->
+
+	<!-- ========================-->
+
+	<fieldset>
+		<legend><h1>p:nth-last-child(3)</h1></legend>
+		<em>Selecciona el tercer elemento 'p'
+		contando desde eñ ultimo elemento </em>
+		<br>
+		<br>
+		<section class="nlc">
+		<p>Lorem ipsum dolor sit amet, consectetur.</p>
+		</section>
+	</fieldset>
+	<!-- ========================-->
+</body>
+</html>
